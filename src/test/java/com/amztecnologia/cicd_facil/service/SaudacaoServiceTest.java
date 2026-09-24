@@ -25,7 +25,7 @@ public class SaudacaoServiceTest {
 	void deveRejeitarNomeVazio() {
 		assertThatThrownBy(() -> service.saudar("  "))
 		      .isInstanceOf(IllegalArgumentException.class)
-		      .hasMessage("O nome é obrigatóirio.");
+		      .hasMessage("O nome é obrigatório.");
 	}
 
 }
