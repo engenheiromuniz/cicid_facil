@@ -10,8 +10,8 @@ public class SaudacaoService {
 			throw new IllegalArgumentException("O nome é obrigatório.");
 		}
 		
-		//return "Identificação confirmada. "+nome.trim()+" você está dentro de uma operação CI/CD";		
-		return "Teste para quebrar dentro da pipeline";
+		return "Identificação confirmada. "+nome.trim()+" você está dentro de uma operação CI/CD";		
+//		return "Teste para quebrar dentro da pipeline";
 	}
 
 }
