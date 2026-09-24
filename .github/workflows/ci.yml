@@ -1,0 +1,25 @@
+name: CI
+
+# TRIGGERS: quando o pipeline roda
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:                          # nome do job
+    runs-on: ubuntu-latest        # RUNNER: máquina Linux fornecida pelo GitHub
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v5          # ACTION pronta: clona o repositório
+
+      - name: Instalar o Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build e testes
+        run: ./mvnw -B verify              # STEP com comando de terminal
