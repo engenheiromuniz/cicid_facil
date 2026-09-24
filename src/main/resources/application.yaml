@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cicd-facil
+
+# Expõe o health check (usado por Docker e Kubernetes nos exemplos avançados)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
